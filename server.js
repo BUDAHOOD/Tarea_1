@@ -5,7 +5,7 @@ const cors = require("cors");
 const {readdirSync} = require("fs");
 const bodyParser = require("body-parser");
 const connectDB = require("./database");
-const userRoutes = require("./routes/user");
+//const userRoutes = require("./routes/user");
 require("dotenv").config();
 
 //app middleware
@@ -24,4 +24,4 @@ app.use(cors());
 readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 const port = process.env.PORT || 8000;
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
